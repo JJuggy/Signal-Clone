@@ -3,14 +3,14 @@ import React from "react";
 
 const blue = "blue";
 const grey = "grey";
-
-const Message = ({message, myID}) => {
-	const isMe = message.user.id == myID ;
+const myID = "u1";
+const Message = ({message}) => {
+	const isMe = message.user.id == myID;
 	return (
 		<View
 			style={[
 				styles.container,
-				 isMe ? styles.rightContainer : styles.leftContainer
+				isMe ? styles.rightContainer : styles.leftContainer,
 			]}
 		>
 			<Text style={{color: isMe ? "black" : "white"}}>
@@ -33,14 +33,14 @@ const styles = StyleSheet.create({
 	text: {
 		color: "white",
 	},
-    leftContainer : {
-    backgroundColor:"blue",
-    marginLeft: 10,
-    marginRight: "auto" ,  
-    },
-    rightContainer : {
-    backgroundColor:"grey",
-    marginLeft: "auto",
-    marginRight: 10,
-    }
+	leftContainer: {
+		backgroundColor: "blue",
+		marginLeft: 10,
+		marginRight: "auto",
+	},
+	rightContainer: {
+		backgroundColor: "grey",
+		marginLeft: "auto",
+		marginRight: 10,
+	},
 });

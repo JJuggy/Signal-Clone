@@ -4,18 +4,17 @@ import Message from "../components/Message";
 import ChatRoomData from "../assets/dummy-data/Chats";
 import MessageInput from "../components/MessageInput/MessageInput";
 
-const ChatRoomScreen = () => {
+function ChatRoomScreen() {
 	return (
 		<SafeAreaView style={styles.page}>
 			<FlatList
 				inverted
 				data={ChatRoomData.messages}
-				renderItem={({item}) => <Message message={item} />}
-			/>
-			<MessageInput/>
+				renderItem={({ item }) => <Message message={item} />} />
+			<MessageInput />
 		</SafeAreaView>
 	);
-};
+}
 
 export default ChatRoomScreen;
 

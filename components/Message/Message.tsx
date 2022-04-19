@@ -4,7 +4,7 @@ import React from "react";
 const blue = "blue";
 const grey = "grey";
 const myID = "u1";
-const Message = ({message}) => {
+function Message({ message }) {
 	const isMe = message.user.id == myID;
 	return (
 		<View
@@ -13,12 +13,12 @@ const Message = ({message}) => {
 				isMe ? styles.rightContainer : styles.leftContainer,
 			]}
 		>
-			<Text style={{color: isMe ? "black" : "white"}}>
+			<Text style={{ color: isMe ? "black" : "white" }}>
 				{message.content}
 			</Text>
 		</View>
 	);
-};
+}
 
 export default Message;
 

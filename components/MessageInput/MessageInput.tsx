@@ -4,7 +4,7 @@ import {Feather} from "@expo/vector-icons";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 import {Entypo} from "@expo/vector-icons";
 
-export const MessageInput = () => {
+export function MessageInput() {
 	return (
 		<View style={styles.root}>
 			<View style={styles.inputContainer}>
@@ -12,8 +12,7 @@ export const MessageInput = () => {
 					name="smile"
 					size={24}
 					color="grey"
-					style={styles.icon}
-				/>
+					style={styles.icon} />
 				<TextInput style={styles.input} />
 				<Feather name="camera" size={24} color="grey" />
 				<MaterialCommunityIcons
@@ -21,15 +20,14 @@ export const MessageInput = () => {
 					size={24}
 					color="grey"
 
-                    style = {styles.icon}
-				/>
+					style={styles.icon} />
 			</View>
 			<View style={styles.buttonContainer}>
 				<Entypo name="plus" size={24} color="white" />
 			</View>
 		</View>
 	);
-};
+}
 
 export default MessageInput;
 

@@ -1,6 +1,7 @@
-import {Text, View, Image} from "react-native";
+import {Text, View, Image,Pressable} from "react-native";
 import React from "react";
 import {styles} from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 type chartRoomItemProps = {
 	users: Array<string>;
@@ -9,8 +10,10 @@ type chartRoomItemProps = {
 };
 export const ChatRoomItem = ({chatRoom}) => {
 	const user = chatRoom.users[1];
+
+	const navigation = useNavigation()
 	return (
-		<View style={styles.container}>
+		<Pressable onPress ={ () => navigation.navigate('ChatRoomScreen', {id : chatRoom.id})} style={styles.container}>
 			<View>
 				<Image
 					source={{
@@ -41,7 +44,7 @@ export const ChatRoomItem = ({chatRoom}) => {
 					{chatRoom.lastMessage.content}
 				</Text>
 			</View>
-		</View>
+		</Pressable>
 	);
 };
 

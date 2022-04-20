@@ -16,7 +16,7 @@ export default [{
   },
   newMessages: 4,
 }, {
-  id: '231231231231231',
+  id: '2',
   users: [{
     id: 'u1',
     name: 'Vadim',
